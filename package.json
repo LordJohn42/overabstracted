@@ -13,7 +13,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-epic-spinners": "^0.4.1",
-    "react-scripts": "3.3.0",
+    "react-scripts": "3.4.0",
     "react-soundplayer": "^1.0.4",
     "reactstrap": "^8.2.0",
     "styled-components": "^4.4.1",

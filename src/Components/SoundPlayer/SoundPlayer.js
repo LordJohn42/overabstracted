@@ -52,6 +52,16 @@ class PlaylistSoundPlayer extends Component {
     }
   }
 
+  componentDidUpdate = (prevProps, prevState) => {
+    let { duration, currentTime, soundCloudAudio } = this.props
+
+    if (parseInt(currentTime) !== 0 && parseInt(currentTime) >= parseInt(duration)) {
+      soundCloudAudio.play({ playlistIndex: ++this.state.activeIndex })
+    }
+
+    console.log(this.state)
+  }
+
   nextIndex = () => {
     const { playlist, soundCloudAudio } = this.props
     let { activeIndex } = this.state
@@ -181,3 +191,23 @@ PlaylistSoundPlayer.propTypes = {
 };
 
 export default withSoundCloudAudio(PlaylistSoundPlayer);
+  componentDidUpdate = (prevProps, prevState) => {
+    let { duration, currentTime, soundCloudAudio } = this.props
+
+    if (parseInt(currentTime) !== 0 && parseInt(currentTime) >= parseInt(duration)) {
+      soundCloudAudio.play({ playlistIndex: ++this.state.activeIndex })
+    }
+
+    console.log(this.state)
+  }
+
+  componentDidUpdate = (prevProps, prevState) => {
+    let { duration, currentTime, soundCloudAudio } = this.props
+
+    if (parseInt(currentTime) !== 0 && parseInt(currentTime) >= parseInt(duration)) {
+      soundCloudAudio.play({ playlistIndex: ++this.state.activeIndex })
+    }
+
+    console.log(this.state)
+  }
+
