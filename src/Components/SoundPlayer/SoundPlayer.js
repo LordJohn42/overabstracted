@@ -56,6 +56,7 @@ class PlaylistSoundPlayer extends Component {
     let { duration, currentTime, soundCloudAudio } = this.props
 
     if (parseInt(currentTime) !== 0 && parseInt(currentTime) >= parseInt(duration)) {
+      // eslint-disable-next-line
       soundCloudAudio.play({ playlistIndex: ++this.state.activeIndex })
     }
 
@@ -191,23 +192,3 @@ PlaylistSoundPlayer.propTypes = {
 };
 
 export default withSoundCloudAudio(PlaylistSoundPlayer);
-  componentDidUpdate = (prevProps, prevState) => {
-    let { duration, currentTime, soundCloudAudio } = this.props
-
-    if (parseInt(currentTime) !== 0 && parseInt(currentTime) >= parseInt(duration)) {
-      soundCloudAudio.play({ playlistIndex: ++this.state.activeIndex })
-    }
-
-    console.log(this.state)
-  }
-
-  componentDidUpdate = (prevProps, prevState) => {
-    let { duration, currentTime, soundCloudAudio } = this.props
-
-    if (parseInt(currentTime) !== 0 && parseInt(currentTime) >= parseInt(duration)) {
-      soundCloudAudio.play({ playlistIndex: ++this.state.activeIndex })
-    }
-
-    console.log(this.state)
-  }
-
